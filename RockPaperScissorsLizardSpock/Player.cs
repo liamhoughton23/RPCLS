@@ -11,7 +11,10 @@ namespace RockPaperScissorsLizardSpock
         public int score;
         public int roundsWon;
 
-        
+        public float GetScore()
+        {
+
+        }
 
 
     }

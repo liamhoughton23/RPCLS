@@ -10,8 +10,10 @@ namespace RockPaperScissorsLizardSpock
     {
         public User PlayerOne;
         public User PlayerTwo;
-        public AI AI;
+        public Computer Computer;
         public string option;
+        bool twoPlayers;
+        bool onePlayer;
 
        public Game()
         {
@@ -30,12 +32,15 @@ namespace RockPaperScissorsLizardSpock
             if (option = "1")
             {
                 PlayerOne = new User();
-                AI = new AI();
+                //Computer = new Computer();
+                onePlayer = true;
+               
             }
             else if (option = "2")
             {
                 PlayerOne = new User();
                 PlayerTwo = new User();
+                twoPlayers = true;
             }
             else
             {
