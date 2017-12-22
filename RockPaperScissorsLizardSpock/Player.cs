@@ -6,15 +6,10 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissorsLizardSpock
 {
-    class Player
+    abstract class Player
     {
-        public int score;
-        public int roundsWon;
 
-        public float GetScore()
-        {
-
-        }
+        public abstract int MakeChoice();
 
 
     }

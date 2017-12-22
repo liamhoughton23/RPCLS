@@ -8,12 +8,9 @@ namespace RockPaperScissorsLizardSpock
 {
     class Game
     {
-        public User PlayerOne;
-        public User PlayerTwo;
-        public Computer Computer;
+        public Player PlayerOne;
+        public Player PlayerTwo;
         public string option;
-        bool twoPlayers;
-        bool onePlayer;
 
        public Game()
         {
@@ -23,30 +20,42 @@ namespace RockPaperScissorsLizardSpock
             Console.ReadKey();
             Console.WriteLine("Please emter '1' for one player, and enter '2' for two players");
             option = Console.ReadLine();
-
+            OptionPlayers();
 
         }
 
         public void OptionPlayers()
         {
-            if (option = "1")
+            Console.WriteLine("Please emter '1' for one player, and enter '2' for two players");
+            option = Console.ReadLine();
+
+            switch (option)
             {
-                PlayerOne = new User();
-                //Computer = new Computer();
-                onePlayer = true;
-               
+                case "1":
+                    PlayerOne = new User();
+                    PlayerTwo = new Computer();
+                    break;
+                case "2":
+                    PlayerOne = new User();
+                    PlayerTwo = new User();
+                    break;
+                default:
+                    Console.WriteLine("You typed in something wrong, try again.");
+                    OptionPlayers();
+                    break;
+
             }
-            else if (option = "2")
-            {
-                PlayerOne = new User();
-                PlayerTwo = new User();
-                twoPlayers = true;
-            }
-            else
-            {
-                Console.WriteLine("hey you typed something in wrong");
-                OptionPlayers();
-            }
+            //method for playing the game
+            //playerone make choice
+            //playertwo make choice
+            //use RPCLS class to determine who won the round
+            public void PlayGame()
+        {
+            PlayerOne.MakeChoice();
+            PlayerTwo.MakeChoice();
+
+        }
+            
         }
     }
 }
