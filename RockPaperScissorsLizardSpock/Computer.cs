@@ -10,11 +10,14 @@ namespace RockPaperScissorsLizardSpock
     {
         public Random rnd;
 
+        public Computer()
+        {
+            rnd = new Random();
+        }
         public override int MakeChoice()
         {
-            int result;
-            result = rnd.Next(0, 4);
-            return result;
+            value = rnd.Next(0, 4);
+            return value;
 
         }
     }

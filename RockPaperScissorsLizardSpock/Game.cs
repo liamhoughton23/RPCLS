@@ -8,19 +8,19 @@ namespace RockPaperScissorsLizardSpock
 {
     class Game
     {
-        public Player PlayerOne;
-        public Player PlayerTwo;
+        public Player playerOne;
+        public Player playerTwo;
         public string option;
 
-       public Game()
+        public Game()
         {
-            Console.Write("Welcome to rock paper scissors lizard spock.");
-            Console.Write("the game is simple, pick rock paper scissors or spock, and see if you win the round.");
-            Console.Write("best 2 out of 3 wins");
+            Console.WriteLine("Welcome to rock paper scissors lizard spock.");
             Console.ReadKey();
-            Console.WriteLine("Please emter '1' for one player, and enter '2' for two players");
-            option = Console.ReadLine();
-            OptionPlayers();
+            Console.WriteLine("The game is simple, pick rock paper scissors or spock, and see if you win the round.");
+            Console.ReadKey();
+            Console.WriteLine("Best 2 out of 3 wins");
+            Console.ReadKey();
+            PlayGame();
 
         }
 
@@ -32,12 +32,12 @@ namespace RockPaperScissorsLizardSpock
             switch (option)
             {
                 case "1":
-                    PlayerOne = new User();
-                    PlayerTwo = new Computer();
+                    playerOne = new User();
+                    playerTwo = new Computer();
                     break;
                 case "2":
-                    PlayerOne = new User();
-                    PlayerTwo = new User();
+                    playerOne = new User();
+                    playerTwo = new User();
                     break;
                 default:
                     Console.WriteLine("You typed in something wrong, try again.");
@@ -45,17 +45,21 @@ namespace RockPaperScissorsLizardSpock
                     break;
 
             }
-            //method for playing the game
-            //playerone make choice
-            //playertwo make choice
-            //use RPCLS class to determine who won the round
-            public void PlayGame()
-        {
-            PlayerOne.MakeChoice();
-            PlayerTwo.MakeChoice();
+        }
+        //method for playing the game
+        //playerone make choice
+        //playertwo make choice
+        //use RPCLS class to determine who won the round
 
+        
+        public void PlayGame()
+        {
+            OptionPlayers();
+            playerOne.MakeChoice();
+            playerTwo.MakeChoice();
+            RPCLS rpcls = new RPCLS();
+            rpcls.Formula(playerOne, playerTwo);
         }
-            
-        }
+
     }
 }

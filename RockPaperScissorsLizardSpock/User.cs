@@ -9,15 +9,11 @@ namespace RockPaperScissorsLizardSpock
     class User : Player
     {
         public string name;
-        public string a;
-        public RPCLS formula;
-        public int value;
 
 
         public User()
         {
             GetName();
-            MakeChoice();
         }
 
         public string GetName()
@@ -30,9 +26,10 @@ namespace RockPaperScissorsLizardSpock
 
         public override int MakeChoice()
         {
+            string userChoice;
             Console.WriteLine("Pick 'rock', 'paper', 'scissors', 'lizard', or 'spock'");
-            a = Console.ReadLine();
-            switch (a)
+            userChoice = Console.ReadLine();
+            switch (userChoice)
             {
                 case "rock":
                     value = 0;
