@@ -8,7 +8,6 @@ namespace RockPaperScissorsLizardSpock
 {
     class User : Player
     {
-        public string name;
 
 
         public User()

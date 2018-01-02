@@ -16,7 +16,7 @@ namespace RockPaperScissorsLizardSpock
         {
             Console.WriteLine("Welcome to rock paper scissors lizard spock.");
             Console.ReadKey();
-            Console.WriteLine("The game is simple, pick rock paper scissors or spock, and see if you win the round.");
+            Console.WriteLine("The game is simple, pick rock, paper, scissors, lizard or spock, and see if you win the round.");
             Console.ReadKey();
             Console.WriteLine("Best 2 out of 3 wins");
             Console.ReadKey();

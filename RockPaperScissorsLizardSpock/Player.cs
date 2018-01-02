@@ -11,6 +11,7 @@ namespace RockPaperScissorsLizardSpock
         public int score;
         public int roundsWon;
         public int value;
+        public string name;
         public Player()
         {
             score = 0;
