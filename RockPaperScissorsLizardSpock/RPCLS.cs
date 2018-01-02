@@ -46,12 +46,12 @@ namespace RockPaperScissorsLizardSpock
         {
             if (playerOne.roundsWon >= 2)
             {
-                Console.WriteLine( playerOne.name + "  " + "wins!");
+                Console.WriteLine( playerOne.name + "  " + "wins! With a score of: " + playerOne.roundsWon + "-" + playerTwo.roundsWon);
                 Console.ReadLine();
             }
             else if (playerTwo.roundsWon >= 2)
             {
-                Console.WriteLine(playerTwo.name + " " + "wins!");
+                Console.WriteLine(playerTwo.name + " " + "wins! With a score of: " + playerTwo.roundsWon + "-" + playerOne.roundsWon);
                 Console.ReadLine();
             }
             else
